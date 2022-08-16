@@ -31,7 +31,7 @@
 #' @export
 #'
 beamer <- function(...){
-  templ <- system.file("rmarkdown", "templates", "beamer", "resources", "template.tex", package = "stevetemplates")
+  templ <- system.file("rmarkdown", "templates", "beamer", "resources", "template.tex", package = "granaTemplate")
   rmarkdown::beamer_presentation(template = templ,
                           ...)
 }
@@ -39,5 +39,5 @@ beamer <- function(...){
 #' @rdname beamer
 #' @export
 templ_beamer <- function(){
-  print(system.file("rmarkdown", "templates", "beamer", "resources", "template.tex", package = "stevetemplates"))
+  print(system.file("rmarkdown", "templates", "beamer", "resources", "template.tex", package = "granaTemplate"))
 }
