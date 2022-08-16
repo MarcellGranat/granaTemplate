@@ -3,7 +3,9 @@
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(handout)$handout,$endif$$if(beamer)$ignorenonframetext,$endif$$for(classoption)$$classoption$$sep$,$endfor$$if(make149)$,aspectratio=149$endif$]{$documentclass$}
 
 \usetheme[sectionstyle=style2]{trigon}
-\usetheme{Singapore}
+\usetheme{Darmstadt}
+\usecolortheme{dove}
+
 
 $if(colortheme)$
 \usecolortheme{$colortheme$}
@@ -353,10 +355,6 @@ $header-includes$
 $endfor$
 
 \setkeys{Gin}{width=\linewidth}
-
-\definecolor{UBCblue}{rgb}{0.328, 0.68, 0.668}
-\definecolor{UBCgrey}{rgb}{0.3686, 0.5255, 0.6235}
-\usecolortheme[named=UBCblue]{structure}
 
 % Okay, and begin the actual document...
 
