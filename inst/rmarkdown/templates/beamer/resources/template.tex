@@ -231,8 +231,8 @@ $if(titlegraphic)$\titlegraphic{\includegraphics[width=$if(scaletg)$$scaletg$$el
 \definecolor{uiucblue}{HTML}{003C7D}
 \definecolor{uiucorange}{HTML}{F47F24}
 
-\definecolor{primarycolor}{HTML}{103842}
-$if(secondarycolor)$\definecolor{secondarycolor}{HTML}{$secondarycolor$}$else$$endif$
+\definecolor{primarycolor}{HTML}{153841}
+\definecolor{secondarycolor}{HTML}{53b5ba}
 
 
 % Some optional color adjustments to Beamer. Change as you see fit.
@@ -243,7 +243,7 @@ $if(secondarycolor)$\definecolor{secondarycolor}{HTML}{$secondarycolor$}$else$$e
 \setbeamercolor{section in toc}{fg=primarycolor,bg=white}
 % \setbeamercolor{subsection in toc}{fg=clemsonorange,bg=white}
 \setbeamercolor{footline}{fg=$if(primarycolor)$primarycolor$else$clemsonpurple$endif$!50, bg=white}
-\setbeamercolor{block title}{fg=$if(secondarycolor)$secondarycolor$else$clemsonorange$endif$,bg=white}
+\setbeamercolor{block title}{fg=secondarycolor,bg=white}
 
 
 \let\Tiny=\tiny
@@ -279,8 +279,8 @@ $if(secondarycolor)$\definecolor{secondarycolor}{HTML}{$secondarycolor$}$else$$e
 		\vspace*{1pt}%
             \insertframenumber/\inserttotalframenumber \hspace*{0.1cm}%
             \newline%
-            \color{$if(primarycolor)$primarycolor$else$clemsonpurple$endif$}{\rule{\paperwidth}{0.4mm}}\newline%
-            \color{$if(secondarycolor)$secondarycolor$else$clemsonorange$endif$}{\rule{\paperwidth}{.4mm}}%
+            \color{primarycolor}{\rule{\paperwidth}{0.4mm}}\newline%
+            \color{secondarycolor}{\rule{\paperwidth}{.4mm}}%
         }%
     \fi%
 }
@@ -368,6 +368,15 @@ $if(toc)$
 \end{frame}
 
 $endif$
+
+\section[]{}
+$if(lang)$
+\frame{\small \frametitle{Tartalom}
+$else$
+\frame{\small \frametitle{Table of Contents}
+\tableofcontents}
+$endif$
+
 $body$
 
 $if(natbib)$
@@ -396,7 +405,4 @@ $include-after$
 
 $endfor$
 
-\section[]{}
-\frame{\small \frametitle{Table of Contents}
-\tableofcontents}
 \end{document}
