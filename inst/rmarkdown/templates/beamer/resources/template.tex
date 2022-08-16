@@ -237,10 +237,10 @@ $if(secondarycolor)$\definecolor{secondarycolor}{HTML}{$secondarycolor$}$else$$e
 
 % Some optional color adjustments to Beamer. Change as you see fit.
 %------------------------------------------------------------------
-\setbeamercolor{frametitle}{fg=$if(primarycolor)$primarycolor$else$clemsonpurple$endif$,bg=white}
-\setbeamercolor{title}{fg=$if(primarycolor)$primarycolor$else$clemsonpurple$endif$,,bg=white}
-\setbeamercolor{local structure}{fg=$if(primarycolor)$primarycolor$else$clemsonpurple$endif$,}
-\setbeamercolor{section in toc}{fg=$if(primarycolor)$primarycolor$else$clemsonpurple$endif$,bg=white}
+\setbeamercolor{frametitle}{fg=primarycolor, bg=white}
+\setbeamercolor{title}{fg=primarycolor,,bg=white}
+\setbeamercolor{local structure}{fg=primarycolor,}
+\setbeamercolor{section in toc}{fg=$primarycolor,bg=white}
 % \setbeamercolor{subsection in toc}{fg=clemsonorange,bg=white}
 \setbeamercolor{footline}{fg=$if(primarycolor)$primarycolor$else$clemsonpurple$endif$!50, bg=white}
 \setbeamercolor{block title}{fg=$if(secondarycolor)$secondarycolor$else$clemsonorange$endif$,bg=white}
