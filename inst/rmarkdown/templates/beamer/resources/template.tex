@@ -358,6 +358,20 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
+\AtBeginDocument{%
+  {
+    \usebeamercolor{section in head/foot}
+  }
+  \pgfdeclareverticalshading{beamer@headfade}{\paperwidth}
+  {%
+    color(0cm)=(structure.fg!25!bg);
+    color(1.25cm)=(structure.fg!25!bg)%
+  }
+  \setbeamercolor{section in head/foot}{bg=}
+}
+\addtoheadtemplate{\pgfuseshading{beamer@headfade}\vskip-1.25cm}{}
+\makeatother
+
 % Okay, and begin the actual document...
 
 \begin{document}
