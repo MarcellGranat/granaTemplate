@@ -3,7 +3,7 @@
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(handout)$handout,$endif$$if(beamer)$ignorenonframetext,$endif$$for(classoption)$$classoption$$sep$,$endfor$$if(make149)$,aspectratio=149$endif$]{$documentclass$}
 
 \usetheme[sectionstyle=style2]{trigon}
-% \usetheme{Singapore}
+\usetheme{Singapore}
 
 
 $if(colortheme)$
@@ -140,6 +140,11 @@ $endif$
   \let\insertsubsectionnumber\relax
   \let\subsectionname\relax
   \frame{\subsectionpage}
+}
+
+\AtBeginSection[]
+{
+    \frame{\sectionpage}
 }
 
 $if(links-as-notes)$
