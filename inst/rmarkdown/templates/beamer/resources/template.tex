@@ -215,18 +215,14 @@ $endif$
 % Optional institute tags and titlegraphic.
 % Do feel free to change the titlegraphic if you don't want it as a Markdown field.
 %----------------------------------------------------------------------------------
-%$if(institute)$\institute{$institute$}$endif$
 
-$if(intitute)$
-\institute{$institute$}
-$else$
-$if(lang)$
+$if(lang)$ % default options
 \institute{Magyar Nemzeti Bank}
 $else$
 \institute{Central Bank of Hungary}
 $endif$
-$endif$
 
+$if(institute)$\institute{$institute$}$endif$
 
 
 % \titlegraphic{\includegraphics[width=0.3\paperwidth]{\string~/Dropbox/teaching/clemson-academic.png}} % <-- if you want to know what this looks like without it as a Markdown field.
