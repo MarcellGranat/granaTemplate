@@ -70,17 +70,7 @@ $endif$
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-$if(lang)$
-\ifxetex
-  \usepackage{polyglossia}
-  \setmainlanguage[$polyglossia-lang.options$]{$polyglossia-lang.name$}
-$for(polyglossia-otherlangs)$
-  \setotherlanguage[$polyglossia-otherlangs.options$]{$polyglossia-otherlangs.name$}
-$endfor$
-\else
-  \usepackage[shorthands=off,$babel-lang$]{babel}
-\fi
-$endif$
+% babel
 $if(natbib)$
 \usepackage{natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
@@ -189,8 +179,11 @@ $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
 
+
 \date{2022}
+$if(date)$
 \date{$date$}
+$endif$
 
 
 %% Here's everything I added.
