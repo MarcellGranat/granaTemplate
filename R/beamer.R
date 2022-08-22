@@ -32,7 +32,20 @@
 #'
 beamer <- function(...){
   templ <- system.file("rmarkdown", "templates", "beamer", "resources", "template.tex", package = "granaTemplate")
-
+  
+  library(ggplot2)
+  
+  theme_set(
+    theme_minimal() +
+      theme(
+        legend.position = "bottom",
+        axis.title = element_text(size = 16, color = "#153841"),
+        axis.text = element_text(size = 13)
+      )
+  )
+  
+  message("theme modified!")
+  
   rmarkdown::beamer_presentation(template = templ, ...)
 }
 
