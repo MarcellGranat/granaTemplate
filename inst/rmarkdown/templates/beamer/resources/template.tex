@@ -188,9 +188,8 @@ $endif$
 $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
-$if(author)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
-$endif$
+
+\date{2022}
 \date{$date$}
 
 
@@ -224,6 +223,21 @@ $endif$
 
 $if(institute)$\institute{$institute$}$endif$
 
+$if(lang)$ % default options
+\author{Granát Marcell}
+$else$
+\author{Marcell P. Granát}
+$endif$
+
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+
+
+
+$if(lang)$
+\usepackage[lang]{babel}
+$endif$
 
 % \titlegraphic{\includegraphics[width=0.3\paperwidth]{\string~/Dropbox/teaching/clemson-academic.png}} % <-- if you want to know what this looks like without it as a Markdown field.
 % -----------------------------------------------------------------------------------------------------
