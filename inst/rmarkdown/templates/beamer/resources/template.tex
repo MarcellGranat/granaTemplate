@@ -252,7 +252,7 @@ $if(titlegraphic)$\titlegraphic{\includegraphics[width=$if(scaletg)$$scaletg$$el
 \definecolor{uiucblue}{HTML}{003C7D}
 \definecolor{uiucorange}{HTML}{F47F24}
 
-\definecolor{primarycolor}{HTML}{153841}
+\definecolor{primarycolor}{HTML}{$if(primarycolor)$$primarycolor$$else$153841$endif$}
 \definecolor{secondarycolor}{HTML}{53b5ba}
 
 \usecolortheme[named=primarycolor]{structure}
