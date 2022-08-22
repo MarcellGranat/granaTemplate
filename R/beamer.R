@@ -32,9 +32,8 @@
 #'
 beamer <- function(...){
   templ <- system.file("rmarkdown", "templates", "beamer", "resources", "template.tex", package = "granaTemplate")
-  theme_set(ggdark::dark_theme_minimal())
-  rmarkdown::beamer_presentation(template = templ,
-                          ...)
+
+  rmarkdown::beamer_presentation(template = templ, ...)
 }
 
 #' @rdname beamer
