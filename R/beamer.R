@@ -32,7 +32,9 @@
 #'
 beamer <- function(...){
   templ <- system.file("rmarkdown", "templates", "beamer", "resources", "template.tex", package = "granaTemplate")
-  rmarkdown::beamer_presentation(template = templ,
+  logo <- system.file("logo", "mnb_intezet.png", package = "granaTemplate")
+  
+  rmarkdown::beamer_presentation(template = templ, titlegraphic = logo,
                           ...)
 }
 
